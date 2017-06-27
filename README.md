@@ -5,6 +5,9 @@
     
   This Protocol may help you when you wnat to send somedata as real-time through network. Most of time this can be used full in multi-meadia transportation. MTP used udp protocol for sending data. The port number used by MTP is 3459. MTP Protocol easily to used you don't have write more code.
   
+  ## Requirement
+  * Minimum - java 1.8
+  
   ## HOW IT;S WORK
    
    * MTP is divide data in 60kb packet after that add MTP Header to payload and send this packet to MTPReceiver
