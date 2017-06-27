@@ -108,7 +108,7 @@
 		
 		// Initlize UDP connection
 		mtpSender.setup();	
-		byte[] data=new byte[0x500f];
+		byte[] data=new byte[0x5000];
 		
 		// send data through MTP Trasport
 		mtpSender.send(data);
