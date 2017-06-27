@@ -32,7 +32,7 @@ public class DataReceiver implements OnMTPReceiveListioner {
 		ByteArrayInputStream in=new ByteArrayInputStream(data);
 		BufferedImage image=ImageIO.read(in);
 		
-    if (image==null) {
+    		if (image==null) {
 			System.err.println("null");
 			return;
 		}
