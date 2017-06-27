@@ -29,6 +29,8 @@
         
   * subseqnum = sub sequence number of main sequence.
   * npd = number of packet is divided for a sequence.
+  * s = startbit
+  * e = endbit
   
   You can print each packet header when it,s receive . Give true value when intialize MTPReceiver instance. 
   
@@ -37,10 +39,10 @@
   MTPReceiver r=new MTPReceiver(new DataReceiver(),true);
 		
     // setup UDP Sockets 
-    r.setup();
+    	r.setup();
     
     // start receving UDP Pakcets
-		r.StartReceiving();
+	r.StartReceiving();
     
   ```
   ## How To use
@@ -91,4 +93,33 @@
 
   
   ```
-   
+  * MTPSender initlizing
+  
+  ```java
+  
+  public class DataSender implements OnMTPSendListioner {
+	
+	 public static void main(String...args) throws IOException, InterruptedException, AWTException{
+		
+		MTPSender mtpSender=new MTPSender(InetAddress.getByName("IP"),new DataSender());
+		
+		// Initlize UDP connection
+		mtpSender.setup();	
+		byte[] data=new byte[0x500f];
+		
+		// send data through MTP Trasport
+		mtpSender.send(data);
+			
+	 }
+
+	@Override
+	public void OnDataSend() {
+		//System.out.println("Data Send");
+	}
+}
+  
+  ```
+## Try demo
+
+	* DataReceiver.java
+	* DataSender.java
