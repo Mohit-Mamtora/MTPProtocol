@@ -14,7 +14,7 @@
    * MTPReceiver Receive every Packet and That also Decide data is completely receive or not. If sometime a packet will lose so MTPReceiver terminate that sequence.
    * MTPPacket class is packetalize and depacketalize the payloader with MTP HEADER.  
    
-   ## MTP HEADER Structur
+   ## MTP HEADER Structure
 
          0                   1                   2                   3
          0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
